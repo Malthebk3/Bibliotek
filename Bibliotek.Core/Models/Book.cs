@@ -1,0 +1,35 @@
+using Bibliotek.Core.Interfaces;
+
+namespace Bibliotek.Core.Models;
+
+public class Book : IBook
+{
+    public string Title { get; set; }
+    public string Author { get; set; }
+    public string ISBN { get; set; }
+
+    // Encapsulation: Can only be changed internally via MarkAsBorrowed/Returned
+    public bool IsAvailable { get; private set; }
+
+    public Book(string title, string author, string isbn)
+    {
+        Title = title;
+        Author = author;
+        ISBN = isbn;
+        IsAvailable = true; // New books are always available
+    }
+    public void MarkAsBorrowed()
+    {
+        if (!IsAvailable) throw new InvalidOperationException("Bogen er allerede udlånt.");
+        IsAvailable = false;
+    }
+    public void MarkAsReturned()
+    {
+        if (IsAvailable) throw new InvalidOperationException("Bogen er allerede afleveret.");
+        IsAvailable = true;
+    }
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"[{ISBN}] {Title} af {Author} - {(IsAvailable ? "Tilgængelig" : "Udlånt")}");
+    }
+}

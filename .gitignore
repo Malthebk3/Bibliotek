@@ -1,0 +1,19 @@
+   # Build results
+   [Dd]ebug/
+   [Rr]elease/
+   x64/
+   x86/
+   [Bb]in/
+   [Oo]bj/
+   [Ll]og/
+   [Ll]ogs/
+   
+   # Visual Studio / Rider / VS Code
+   .vs/
+   .idea/
+   *.user
+   *.suo
+   *.cache
+   *.dll
+   *.exe
+   *.pdb
