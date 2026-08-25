@@ -1,0 +1,36 @@
+name: .NET CI Pipeline
+
+# This tells GitHub WHEN to run the automation
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    # We use windows-latest because Avalonia UI projects sometimes have 
+    # specific dependencies that build smoother on Windows runners.
+    runs-on: windows-latest 
+
+    steps:
+    # 1. Download your code from GitHub
+    - uses: actions/checkout@v4
+    
+    # 2. Install .NET on the GitHub robot
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' # Change to 7.0.x or 9.0.x if you are using a different version
+        
+    # 3. Download all NuGet packages
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    # 4. Compile the code to check for syntax errors
+    - name: Build
+      run: dotnet build --no-restore
+      
+    # 5. Run the Unit Tests!
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
