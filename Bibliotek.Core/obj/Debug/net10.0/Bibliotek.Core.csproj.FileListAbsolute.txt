@@ -12,3 +12,4 @@ C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibli
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.pdb
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.genruntimeconfig.cache
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\ref\Bibliotek.Core.dll
+C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.sourcelink.json

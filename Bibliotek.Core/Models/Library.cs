@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using Bibliotek.Core.Interfaces;
 
-namespace Bibliotek.Core.Services;
+namespace Bibliotek.Core.Models;
 
 public class Library : ILibrary
 {

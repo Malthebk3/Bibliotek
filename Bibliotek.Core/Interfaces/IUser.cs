@@ -1,5 +1,11 @@
+using System.Text.Json.Serialization;
+using Bibliotek.Core.Models;
+
 namespace Bibliotek.Core.Interfaces;
 
+// This tells the Json serializer to remember if a user is standard or premium
+[JsonDerivedType(typeof(User), "standard")]
+[JsonDerivedType(typeof(PremiumUser), "premium")]
 public interface IUser
 {
     string Name { get; }

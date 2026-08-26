@@ -101,3 +101,4 @@ C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibli
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Tests\obj\Debug\net10.0\Bibliotek.Tests.pdb
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Tests\obj\Debug\net10.0\Bibliotek.Tests.genruntimeconfig.cache
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Tests\obj\Debug\net10.0\ref\Bibliotek.Tests.dll
+C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Tests\obj\Debug\net10.0\Bibliotek.Tests.sourcelink.json
