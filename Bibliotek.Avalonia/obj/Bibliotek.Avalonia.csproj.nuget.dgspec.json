@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malth\\Documents\\Techcollege\\H2\\OOP\\Gennemgående Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj": {}
+    "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malth\\Documents\\Techcollege\\H2\\OOP\\Gennemgående Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj": {
+    "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malth\\Documents\\Techcollege\\H2\\OOP\\Gennemgående Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj",
+        "projectUniqueName": "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj",
         "projectName": "Bibliotek.Avalonia",
-        "projectPath": "C:\\Users\\malth\\Documents\\Techcollege\\H2\\OOP\\Gennemgående Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj",
-        "packagesPath": "C:\\Users\\malth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malth\\Documents\\Techcollege\\H2\\OOP\\Gennemgående Opgave\\Bibliotek\\Bibliotek.Avalonia\\obj\\",
+        "projectPath": "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Avalonia\\Bibliotek.Avalonia.csproj",
+        "packagesPath": "C:\\Users\\Malthe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Avalonia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\malth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Malthe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,7 +30,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -45,11 +44,10 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Avalonia": {
@@ -93,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

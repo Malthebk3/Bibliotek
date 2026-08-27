@@ -8,8 +8,8 @@ build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassNa
 build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.AvaloniaUseCompiledBindingsByDefault = true
 build_property.AvaloniaMainPackageVersion = 12.1.1
-build_property.AvaloniaPreviewerNetCoreToolPath = C:\Users\malth\.nuget\packages\avalonia\12.1.1\buildTransitive\\..\tools\net8.0\designer\Avalonia.Designer.HostApp.dll
-build_property.AvaloniaResourcePaths = C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Avalonia\Assets\avalonia-logo.ico
+build_property.AvaloniaPreviewerNetCoreToolPath = C:\Users\Malthe\.nuget\packages\avalonia\12.1.1\buildTransitive\\..\tools\net8.0\designer\Avalonia.Designer.HostApp.dll
+build_property.AvaloniaResourcePaths = C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Avalonia\Assets\avalonia-logo.ico
 build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
 build_property._MvvmToolkitIsUsingWindowsRuntimePack = false
 build_property.CsWinRTComponent = 
@@ -24,17 +24,16 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
-build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bibliotek.Avalonia
-build_property.ProjectDir = C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Avalonia\
+build_property.ProjectDir = C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Avalonia\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/malth/Documents/Techcollege/H2/OOP/Gennemgående Opgave/Bibliotek/Bibliotek.Avalonia/App.axaml]
+[C:/Users/Malthe/Documents/techcollege/H2/OOP/Gennemgående-Opgave/Bibliotek/Bibliotek.Avalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/malth/Documents/Techcollege/H2/OOP/Gennemgående Opgave/Bibliotek/Bibliotek.Avalonia/Views/MainWindow.axaml]
+[C:/Users/Malthe/Documents/techcollege/H2/OOP/Gennemgående-Opgave/Bibliotek/Bibliotek.Avalonia/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
