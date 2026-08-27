@@ -692,6 +692,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Bibliotek.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/Bibliotek.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bibliotek.Core.dll": {}
+        }
       }
     }
   },
@@ -1660,6 +1670,11 @@
         "tmds.dbus.protocol.0.94.1.nupkg.sha512",
         "tmds.dbus.protocol.nuspec"
       ]
+    },
+    "Bibliotek.Core/1.0.0": {
+      "type": "project",
+      "path": "../Bibliotek.Core/Bibliotek.Core.csproj",
+      "msbuildProject": "../Bibliotek.Core/Bibliotek.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1669,6 +1684,7 @@
       "Avalonia.Fonts.Inter >= 12.1.1",
       "Avalonia.Themes.Fluent >= 12.1.1",
       "AvaloniaUI.DiagnosticsSupport >= 2.2.3",
+      "Bibliotek.Core >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.4.2"
     ]
   },
@@ -1703,7 +1719,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Core\\Bibliotek.Core.csproj": {
+              "projectPath": "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Core\\Bibliotek.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

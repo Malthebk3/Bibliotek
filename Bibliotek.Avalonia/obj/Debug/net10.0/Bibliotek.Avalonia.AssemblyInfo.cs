@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bibliotek.Avalonia")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d61e9c604e66e60811e4e6e84a181ebff3065037")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dacab0a71a9cd169aa468e5c0de72790e7048a6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bibliotek.Avalonia")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bibliotek.Avalonia")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
