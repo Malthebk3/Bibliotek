@@ -16,6 +16,7 @@ public partial class UserDetailViewModel : ViewModelBase
     [ObservableProperty] private string _editName;
     [ObservableProperty] private IUser _selectedUser;
     [ObservableProperty] private string _searchQuery = string.Empty;
+    [ObservableProperty] private string _borrowedBooksHeader = string.Empty;
     [ObservableProperty] private IBook? _selectedBorrowedBook;
     [ObservableProperty] private IBook? _selectedAvailableBook; 
     [ObservableProperty] private string _statusMessage = "Klar.";
@@ -34,6 +35,7 @@ public partial class UserDetailViewModel : ViewModelBase
         // Initialize the lists
         foreach (var book in user.BorrowedBooks) BorrowedBooks.Add(book);
         RefreshAvailableBooks();
+        RefreshBorrowedBooksHeader();
     }
     [RelayCommand]
     private void SaveChanges()
@@ -85,6 +87,11 @@ public partial class UserDetailViewModel : ViewModelBase
         }
     }
 
+    private void RefreshBorrowedBooksHeader()
+    {
+        BorrowedBooksHeader = $"Udlånte bøger ({BorrowedBooks.Count}/{SelectedUser.MaxBooks})";
+    }
+
     [RelayCommand]
     private void ReturnBook()
     {
@@ -103,6 +110,7 @@ public partial class UserDetailViewModel : ViewModelBase
             BorrowedBooks.Remove(SelectedBorrowedBook);
             SelectedBorrowedBook = null; // Clear selection
             RefreshAvailableBooks(); // The book is now available again!
+            RefreshBorrowedBooksHeader();
         }
         else
         {
@@ -124,12 +132,12 @@ public partial class UserDetailViewModel : ViewModelBase
         if (success)
         {
             StatusMessage = $"Lånte: {SelectedAvailableBook.Title}";
-            
             // Move the book from Available to Borrowed in the UI
             BorrowedBooks.Add(SelectedAvailableBook);
             AvailableBooks.Remove(SelectedAvailableBook);
             
             SelectedAvailableBook = null; // Clear selection
+            RefreshBorrowedBooksHeader();
         }
         else
         {

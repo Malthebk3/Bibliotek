@@ -5,7 +5,7 @@ namespace Bibliotek.Core.Models;
 public class PremiumUser : User
 {
     public override bool IsPremium => true;
-    protected override int MaxBooks => 5;
+    public override int MaxBooks => 5;
     public PremiumUser(string name, string userId) : base(name, userId)
     {
 

@@ -10,7 +10,7 @@ public class User : IUser
     protected readonly List<IBook> _borrowedBooks = new();
     public IReadOnlyList<IBook> BorrowedBooks => _borrowedBooks.AsReadOnly();
     public virtual bool IsPremium => false;
-    protected virtual int MaxBooks => 4;
+    public virtual int MaxBooks => 4;
 
     public User(string name, string userId)
     {

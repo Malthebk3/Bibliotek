@@ -5,6 +5,7 @@ public interface IUser
     string Name { get; }
     string UserId { get; }
     bool IsPremium { get; }
+    int MaxBooks { get; }
 
     // IReadOnlyList so the UI/Tests can read the books, but not add/remove them directly
     // The actual list is managed internally by the User class
