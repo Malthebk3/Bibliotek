@@ -14,6 +14,7 @@
 
     <Window.Resources>
     <conv:BoolToUserTypeConverter x:Key="BoolToUserType"/>
+    <conv:BoolToIsAvailableConverter x:Key="BoolToIsAvailable"/>
     </Window.Resources>
 
     <!-- The 2x2 Grid Layout -->
@@ -50,7 +51,7 @@
                     <TableViewColumn Header="Titel" Binding="{Binding Title}" />
                     <TableViewColumn Header="Forfatter" Binding="{Binding Author}" />
                     <TableViewColumn Header="ISBN" Binding="{Binding ISBN}"/>
-                    <TableViewColumn Header="Status" Binding="{Binding IsAvailable}"/>
+                    <TableViewColumn Header="Status" Binding="{Binding IsAvailable, Converter={StaticResource BoolToIsAvailable}}"/>
                 </TableView.Columns>
                 </TableView>
 
