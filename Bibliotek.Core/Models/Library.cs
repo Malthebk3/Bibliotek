@@ -21,8 +21,10 @@ public class Library : ILibrary
     }
     public void RemoveBook(IBook book)
     {
-        if (book.IsAvailable) _books.Remove(book);
-        else throw new InvalidOperationException("Bogen kan ikke fjernes, da den er udlånt.");
+        if (!book.IsAvailable)
+        throw new InvalidOperationException("Bogen er udlånt og kan ikke slettes.");
+
+        _books.Remove(book);
     }
     public string GetNextUserId()
     {
@@ -49,6 +51,9 @@ public class Library : ILibrary
     }
     public void RemoveUser(IUser user)
     {
+        if (user.BorrowedBooks.Count > 0)
+        throw new InvalidOperationException("Brugeren har udlånte bøger og kan ikke slettes.");
+
         _users.Remove(user);
     }
     public IUser? GetBorrower(IBook book)
@@ -57,8 +62,10 @@ public class Library : ILibrary
     }
     public IBook? FindBookByISBN(string isbn) => _books.FirstOrDefault(b => b.ISBN == isbn);
 
-    // Krav #2: Function Pointer / Delegate
+    // Function Pointer / Delegate
     // This allows the caller to pass in ANY logic to filter books!
+    // For example, you can pass in a lambda like: b => b.Author == "Some Author"
+    // The method will then return all books that match that condition.
     public IEnumerable<IBook> FindBooks(Func<IBook, bool> predicate) => _books.Where(predicate);
 
     public void DisplayAllBooks()

@@ -112,4 +112,31 @@ public class LibraryTests
 
         Assert.DoesNotContain(user, library.Users);
     }
+    [Fact]
+    public void RemoveBook_BorrowedBook_ThrowsException()
+    {
+        var library = new Library();
+        var book = new Book("Dune", "Herbert", "1");
+        var user = new User("Anders", "U0001");
+        library.AddBook(book);
+        library.RegisterUser(user);
+        user.BorrowBook(book);
+
+        Assert.Throws<InvalidOperationException>(() => library.RemoveBook(book));
+        Assert.Contains(book, library.Books);
+    }
+
+    [Fact]
+    public void RemoveUser_UserWithLoans_ThrowsException()
+    {
+        var library = new Library();
+        var book = new Book("Dune", "Herbert", "1");
+        var user = new User("Anders", "U0001");
+        library.AddBook(book);
+        library.RegisterUser(user);
+        user.BorrowBook(book);
+
+        Assert.Throws<InvalidOperationException>(() => library.RemoveUser(user));
+        Assert.Contains(user, library.Users);
+    }
 }

@@ -51,15 +51,15 @@ public partial class UserDetailViewModel : ViewModelBase
     [RelayCommand]
     private void DeleteUser()
     {
-        // User cannot be deleted if they have borrowed books
-        if (SelectedUser.BorrowedBooks.Count > 0)
+        try
         {
-            StatusMessage = "Fejl: Brugeren har udlånte bøger og kan ikke slettes.";
-            return;
+            _library.RemoveUser(SelectedUser);
+            _onClose();
         }
-
-        _library.RemoveUser(SelectedUser);
-        _onClose(); // Close window -> Closed event -> RefreshTables()
+        catch (InvalidOperationException ex)
+        {
+            StatusMessage = $"Fejl: {ex.Message}";
+        }
     }
 
     // This method is automatically called by CommunityToolkit whenever SearchQuery changes!

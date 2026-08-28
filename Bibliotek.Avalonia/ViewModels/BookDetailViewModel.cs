@@ -52,14 +52,14 @@ public partial class BookDetailViewModel : ViewModelBase
     [RelayCommand]
     private void DeleteBook()
     {
-        // Business rule: a borrowed book can't be deleted
-        if (!_book.IsAvailable)
+        try
         {
-            StatusMessage = "Fejl: Bogen er udlånt og kan ikke slettes.";
-            return;
+            _library.RemoveBook(_book);
+            _onClose();
         }
-
-        _library.RemoveBook(_book); // The PDF-required method!
-        _onClose(); // Close window -> Closed event -> RefreshTables()
+        catch (InvalidOperationException ex)
+        {
+            StatusMessage = $"Fejl: {ex.Message}";
+        }
     }
 }
