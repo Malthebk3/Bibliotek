@@ -52,4 +52,29 @@ public class UserTests
         Assert.False(user.BorrowBook(sixthBook));
         Assert.Equal(5, user.BorrowedBooks.Count);
     }
+    [Fact]
+    public void UpdateName_ChangesName()
+    {
+        var user = new User("Old Name", "U0001");
+
+        user.UpdateName("New Name");
+
+        Assert.Equal("New Name", user.Name);
+    }
+
+    [Fact]
+    public void IsPremium_ReturnsFalse_ForStandardUser()
+    {
+        var user = new User("Anders", "U0001");
+
+        Assert.False(user.IsPremium);
+    }
+
+    [Fact]
+    public void IsPremium_ReturnsTrue_ForPremiumUser()
+    {
+        var user = new PremiumUser("Bente", "U0002");
+
+        Assert.True(user.IsPremium);
+    }
 }

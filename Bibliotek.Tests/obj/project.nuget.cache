@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j7xtvUq5+LI=",
+  "dgSpecHash": "76H7bxO8h+M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Malthe\\Documents\\techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Tests\\Bibliotek.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Malthe\\Documents\\Techcollege\\H2\\OOP\\Gennemgående-Opgave\\Bibliotek\\Bibliotek.Tests\\Bibliotek.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Malthe\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",
     "C:\\Users\\Malthe\\.nuget\\packages\\microsoft.codecoverage\\17.14.1\\microsoft.codecoverage.17.14.1.nupkg.sha512",

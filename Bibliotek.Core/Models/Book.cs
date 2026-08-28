@@ -4,9 +4,9 @@ namespace Bibliotek.Core.Models;
 
 public class Book : IBook
 {
-    public string Title { get; set; }
-    public string Author { get; set; }
-    public string ISBN { get; set; }
+    public string Title { get; private set; }
+    public string Author { get; private set; }
+    public string ISBN { get; }
 
     // Encapsulation: Can only be changed internally via MarkAsBorrowed/Returned
     public bool IsAvailable { get; private set; }
@@ -17,6 +17,11 @@ public class Book : IBook
         Author = author;
         ISBN = isbn;
         IsAvailable = true; // New books are always available
+    }
+    public void UpdateInfo(string newTitle, string newAuthor)
+    {
+        Title = newTitle;
+        Author = newAuthor;
     }
     public void MarkAsBorrowed()
     {

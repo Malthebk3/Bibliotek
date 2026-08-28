@@ -1,19 +1,15 @@
-using System.Text.Json.Serialization;
-using Bibliotek.Core.Models;
-
 namespace Bibliotek.Core.Interfaces;
 
-// This tells the Json serializer to remember if a user is standard or premium
-[JsonDerivedType(typeof(User), "standard")]
-[JsonDerivedType(typeof(PremiumUser), "premium")]
 public interface IUser
 {
     string Name { get; }
     string UserId { get; }
+    bool IsPremium { get; }
 
     // IReadOnlyList so the UI/Tests can read the books, but not add/remove them directly
+    // The actual list is managed internally by the User class
     IReadOnlyList<IBook> BorrowedBooks { get; }
-
+    void UpdateName(string newName);
     bool BorrowBook(IBook book);
     bool ReturnBook(IBook book);
     void DisplayBorrowedBooks();

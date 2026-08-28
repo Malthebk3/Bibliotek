@@ -4,6 +4,7 @@ namespace Bibliotek.Core.Models;
 
 public class PremiumUser : User
 {
+    public override bool IsPremium => true;
     protected override int MaxBooks => 5;
     public PremiumUser(string name, string userId) : base(name, userId)
     {
@@ -13,7 +14,7 @@ public class PremiumUser : User
     {
         if (!book.IsAvailable) return false; // Tjek om bogen allerede er udlånt
         
-        if (_borrowedBooks.Count >= MaxBooks) return false; // Tjek om bruger allerede har nået sin låne grænse.
+        if (_borrowedBooks.Count >= MaxBooks) return false; // Tjek om bruger allerede har nået sin lånegrænse.
 
         book.MarkAsBorrowed();
         _borrowedBooks.Add(book);

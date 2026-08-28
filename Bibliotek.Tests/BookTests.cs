@@ -27,4 +27,14 @@ public class BookTests
 
         Assert.Throws<InvalidOperationException>(() => book.MarkAsBorrowed());
     }
+    [Fact]
+    public void UpdateInfo_ChangesTitleAndAuthor()
+    {
+        var book = new Book("Original Title", "Old Author", "123");
+
+        book.UpdateInfo("New Title", "New Author");
+
+        Assert.Equal("New Title", book.Title);
+        Assert.Equal("New Author", book.Author);
+    }
 }

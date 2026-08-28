@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using System.Runtime.CompilerServices;
 using Bibliotek.Core.Interfaces;
 
@@ -18,8 +19,27 @@ public class Library : ILibrary
         
         _books.Add(book);
     }
-    public void RemoveBook(IBook book) => _books.Remove(book);
+    public void RemoveBook(IBook book)
+    {
+        if (book.IsAvailable) _books.Remove(book);
+        else throw new InvalidOperationException("Bogen kan ikke fjernes, da den er udlånt.");
+    }
+    public string GetNextUserId()
+    {
+        int highest = 0;
 
+        foreach (var user in _users)
+        {
+            // Extract the digits from IDs like "U0003" -> 3
+            string digits = new string(user.UserId.Where(char.IsDigit).ToArray());
+            if (int.TryParse(digits, out int number) && number > highest)
+            {
+                highest = number;
+            }
+        }
+
+        return $"U{highest + 1:D4}"; // U0001, U0002, U0003...
+    }
     public void RegisterUser(IUser user)
     {
         if (_users.Any(u => u.UserId == user.UserId))
@@ -27,7 +47,14 @@ public class Library : ILibrary
         
         _users.Add(user);
     }
-
+    public void RemoveUser(IUser user)
+    {
+        _users.Remove(user);
+    }
+    public IUser? GetBorrower(IBook book)
+    {
+        return _users.FirstOrDefault(user => user.BorrowedBooks.Contains(book));
+    }
     public IBook? FindBookByISBN(string isbn) => _books.FirstOrDefault(b => b.ISBN == isbn);
 
     // Krav #2: Function Pointer / Delegate

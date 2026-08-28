@@ -1,19 +1,25 @@
+using System.Text.Json.Serialization;
 using Bibliotek.Core.Interfaces;
 
 namespace Bibliotek.Core.Models;
 
 public class User : IUser
 {
-    public string Name { get; }
+    public string Name { get; private set; }
     public string UserId { get; }
     protected readonly List<IBook> _borrowedBooks = new();
     public IReadOnlyList<IBook> BorrowedBooks => _borrowedBooks.AsReadOnly();
+    public virtual bool IsPremium => false;
     protected virtual int MaxBooks => 4;
 
     public User(string name, string userId)
     {
         Name = name;
         UserId = userId;
+    }
+    public void UpdateName(string newName)
+    {
+        Name = newName;
     }
     public virtual bool BorrowBook(IBook book)
     {

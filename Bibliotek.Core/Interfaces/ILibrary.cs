@@ -7,10 +7,13 @@ public interface ILibrary
 
     void AddBook(IBook book);
     void RemoveBook(IBook book);
+    string GetNextUserId();
     void RegisterUser(IUser user);
+    void RemoveUser(IUser user);
     
     void DisplayAllBooks();
     void DisplayAvailableBooks();
+    IUser? GetBorrower(IBook book);
     IBook? FindBookByISBN(string isbn);
     
     // TEACHER REQ #2: Function Pointer / Delegate for advanced searching

@@ -13,3 +13,18 @@ C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibli
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.genruntimeconfig.cache
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\ref\Bibliotek.Core.dll
 C:\Users\malth\Documents\Techcollege\H2\OOP\Gennemgående Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.sourcelink.json
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\bin\Debug\net10.0\Bibliotek.Core.exe
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\bin\Debug\net10.0\Bibliotek.Core.deps.json
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\bin\Debug\net10.0\Bibliotek.Core.runtimeconfig.json
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\bin\Debug\net10.0\Bibliotek.Core.dll
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\bin\Debug\net10.0\Bibliotek.Core.pdb
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.AssemblyInfoInputs.cache
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.AssemblyInfo.cs
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.csproj.CoreCompileInputs.cache
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.sourcelink.json
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.dll
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\refint\Bibliotek.Core.dll
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.pdb
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\Bibliotek.Core.genruntimeconfig.cache
+C:\Users\Malthe\Documents\techcollege\H2\OOP\Gennemgående-Opgave\Bibliotek\Bibliotek.Core\obj\Debug\net10.0\ref\Bibliotek.Core.dll

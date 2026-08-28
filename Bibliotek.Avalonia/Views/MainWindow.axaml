@@ -1,22 +1,118 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:Bibliotek.Avalonia.ViewModels"
+        xmlns:conv="using:Bibliotek.Avalonia.Converters"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="500"
         x:Class="Bibliotek.Avalonia.Views.MainWindow"
         x:DataType="vm:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="Bibliotek.Avalonia">
+        Title="Bibliotek Administration"
+        MinWidth="800" MinHeight="500"
+        Width="1300" Height="900">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainViewModel />
-    </Design.DataContext>
+    <Window.Resources>
+    <conv:BoolToUserTypeConverter x:Key="BoolToUserType"/>
+    </Window.Resources>
 
-    <TextBox Text="{Binding Greeting}"
-             HorizontalAlignment="Center"
-             VerticalAlignment="Center" />
+    <!-- The 2x2 Grid Layout -->
+    <Grid RowDefinitions="*,*,Auto" ColumnDefinitions="*,*" Margin="10">
+        
+        <!-- ========================================== -->
+        <!-- COL 1, ROW 1: Create Book Form             -->
+        <!-- ========================================== -->
+        <Border Grid.Row="0" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Tilføj ny bog" FontSize="16" FontWeight="Bold"/>
+                <TextBox PlaceholderText="Titel" Text="{Binding NewBookTitle}"/>
+                <TextBox PlaceholderText="Forfatter" Text="{Binding NewBookAuthor}"/>
+                <TextBox PlaceholderText="ISBN" Text="{Binding NewBookIsbn}"/>
+                <Button Content="Tilføj Bog" Command="{Binding AddBookCommand}" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Border>
 
+        <!-- ========================================== -->
+        <!-- COL 2, ROW 1: Books Database Table         -->
+        <!-- ========================================== -->
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <TextBlock Grid.Row="0" Text="Bøger i biblioteket" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- TableView for Books -->
+                <TableView Grid.Row="1"
+                ItemsSource="{Binding Books}"
+                SelectedItem="{Binding SelectedBook}"
+                CanUserResizeColumns="False">
+                <TableView.Columns>
+                    <TableViewColumn Header="Titel" Binding="{Binding Title}" />
+                    <TableViewColumn Header="Forfatter" Binding="{Binding Author}" />
+                    <TableViewColumn Header="ISBN" Binding="{Binding ISBN}"/>
+                    <TableViewColumn Header="Status" Binding="{Binding IsAvailable}"/>
+                </TableView.Columns>
+                </TableView>
+
+                <Button Grid.Row="2"
+                    Content="Vis bog detaljer" 
+                    Command="{Binding OpenBookDetailsCommand}" 
+                    HorizontalAlignment="Stretch" 
+                    Margin="0,10,0,0"
+                    Background="#4CAF50" Foreground="White"/>
+            </Grid>
+        </Border>
+
+        <!-- ========================================== -->
+        <!-- COL 1, ROW 2: Create User Form             -->
+        <!-- ========================================== -->
+        <Border Grid.Row="1" Grid.Column="0" BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Registrer ny bruger" FontSize="16" FontWeight="Bold"/>
+                <TextBox PlaceholderText="Navn" Text="{Binding NewUserName}"/>
+                <CheckBox Content="Er Premium Bruger?" IsChecked="{Binding IsNewUserPremium}"/>
+                <Button Content="Tilføj Bruger" Command="{Binding AddUserCommand}" HorizontalAlignment="Stretch"/>
+            </StackPanel>
+        </Border>
+
+        <!-- ========================================== -->
+        <!-- COL 2, ROW 2: Users Database Table         -->
+        <!-- ========================================== -->
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" Margin="5" Padding="10">
+
+            <Grid RowDefinitions="Auto,*,Auto">
+
+                <TextBlock Grid.Row="0" Text="Brugere" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                <!-- TableView for Users. SelectedItem triggers opening the new window! -->
+                <TableView Grid.Row="1"
+                ItemsSource="{Binding Users}"
+                SelectedItem="{Binding SelectedUser}"
+                CanUserResizeColumns="False">
+                <TableView.Columns>
+                    <TableViewColumn Header="Navn" Binding="{Binding Name}" />
+                    <TableViewColumn Header="User ID" Binding="{Binding UserId}" />
+                    <TableViewColumn Header="Type" Binding="{Binding IsPremium, Converter={StaticResource BoolToUserType}}"/>
+                </TableView.Columns>
+                </TableView>
+                    <Button Grid.Row="2"
+                    Content="Vis bruger detaljer" 
+                    Command="{Binding OpenUserDetailsCommand}" 
+                    HorizontalAlignment="Stretch" 
+                    Margin="0,10,0,0"
+                    Background="#4CAF50" Foreground="White"/>
+            </Grid>
+        </Border>
+        
+        <!-- ========================================== -->
+        <!-- STATUS BAR: spans both columns at bottom   -->
+        <!-- ========================================== -->
+        <TextBlock Grid.Row="2" 
+               Grid.ColumnSpan="2" 
+               Text="{Binding StatusMessage}" 
+               FontWeight="SemiBold" 
+               Foreground="DarkBlue" 
+               Margin="5,10,5,0"/>
+    </Grid>
+    
 </Window>
